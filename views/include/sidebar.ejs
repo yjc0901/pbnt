@@ -4,19 +4,19 @@
     <div id="sh_hd_wrapper">
         <div id="shGnb" class="main">  
             <div class="sh_logo">
-                <a href="index"><img src="./resources/img/common/logo.png" alt=""></a>
+                <a href="<%= base_url %>/index"><img src="<%= base_url %>/resources/img/common/logo.png" alt=""></a>
             </div>
             <nav class="sh_nav">
                 <ul>
                     <li>
-                        <a href="/portfolio">사업안내</a>
+                        <a href="<%= base_url %>/portfolio">사업안내</a>
                         <ul class="sh_lnb_s">
-                            <li><a href="/portfolio">PORTFOLIO</a></li>
+                            <li><a href="<%= base_url %>/portfolio">PORTFOLIO</a></li>
                             <!-- <li><a href="/news">NEWS</a></li> -->
                         </ul>
                     </li>
                     <li>
-                        <a href="/pricingInfo">가격안내</a>
+                        <a href="<%= base_url %>/pricingInfo">가격안내</a>
                         <ul class="sh_lnb_s">
                             <!-- <li><a href="">준비중</a></li>
                             <li><a href="">소분류</a></li>
@@ -24,25 +24,25 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="/aboutCompany">회사소개</a>
+                        <a href="<%= base_url %>/aboutCompany">회사소개</a>
                         <ul class="sh_lnb_s">
-                            <li><a href="/aboutCompany">회사소개</a></li>
-                            <li><a href="/companyHistory">연혁</a></li>
+                            <li><a href="<%= base_url %>/aboutCompany">회사소개</a></li>
+                            <li><a href="<%= base_url %>/companyHistory">연혁</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="/customerCenter">고객지원</a>
+                        <a href="<%= base_url %>/customerCenter">고객지원</a>
                         <ul class="sh_lnb_s">
                             <!-- <li><a href="/customerCenter">고객센터</a></li> -->
-                            <li><a href="/notice">공지사항</a></li>
-                            <li><a href="/inquiry">문의하기</a></li>
+                            <li><a href="<%= base_url %>/notice">공지사항</a></li>
+                            <li><a href="<%= base_url %>/inquiry">문의하기</a></li>
                             <!-- <li><a href="">오시는 길</a></li> -->
                         </ul>
                     </li>
                     <!-- 로그인 메뉴 추가 -->
                     <li>
                         <% if (isLoggedIn) { %>
-                            <a href="/logout">로그아웃</a>
+                            <a href="<%= base_url %>/logout">로그아웃</a>
                             <ul class="sh_lnb_s">
                                 <!-- <li><span class="user-info"><%= user.username %>님</span></li> -->
                                 <!-- 필요한 경우 마이페이지 등 추가 메뉴
@@ -50,7 +50,7 @@
                                 -->
                             </ul>
                         <% } else { %>
-                            <a href="/login">로그인</a>
+                            <a href="<%= base_url %>/login">로그인</a>
                         <% } %>
                     </li>
                 </ul>
@@ -63,19 +63,19 @@
                 <div class="pf_cate_wrap">
                     <!-- 로고 추가 -->
                     <div class="pf_logo">
-                        <a href="index"><img src="./resources/img/common/logo.png" alt=""></a>
+                        <a href="<%= base_url %>/index"><img src="<%= base_url %>/resources/img/common/logo.png" alt=""></a>
                     </div>
                     <div class="pf_cate">
                         <ul>
                             <li>
-                                <a href="/portfolio">사업안내</a>
+                                <a href="<%= base_url %>/portfolio">사업안내</a>
                                 <ul class="sh_lnb_s">
-                                    <li><a href="/portfolio">PORTFOLIO</a></li>
+                                    <li><a href="<%= base_url %>/portfolio">PORTFOLIO</a></li>
                                     <!-- <li><a href="/news">NEWS</a></li> -->
                                 </ul>
                             </li>
                             <li>
-                                <a href="/pricingInfo">가격안내</a>
+                                <a href="<%= base_url %>/pricingInfo">가격안내</a>
                                 <ul class="sh_lnb_s">
                                     <!-- <li><a href="">준비중</a></li>
                                     <li><a href="">소분류</a></li>
@@ -83,18 +83,18 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/aboutCompany">회사소개</a>
+                                <a href="<%= base_url %>/aboutCompany">회사소개</a>
                                 <ul class="sh_lnb_s">
-                                    <li><a href="/aboutCompany">회사소개</a></li>
-                                    <li><a href="/companyHistory">연혁</a></li>
+                                    <li><a href="<%= base_url %>/aboutCompany">회사소개</a></li>
+                                    <li><a href="<%= base_url %>/companyHistory">연혁</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="/notice">고객지원</a>
+                                <a href="<%= base_url %>/customerCenter">고객지원</a>
                                 <ul class="sh_lnb_s">
-                                    <li><a href="/notice">공지사항</a></li>
-                                    <li><a href="/customerCenter">고객센터</a></li>
-                                    <li><a href="/inquiry">문의하기</a></li>
+                                    <li><a href="<%= base_url %>/notice">공지사항</a></li>
+                                    <li><a href="<%= base_url %>/customerCenter">고객센터</a></li>
+                                    <li><a href="<%= base_url %>/inquiry">문의하기</a></li>
                                     <!-- <li><a href="">오시는 길</a></li> -->
                                 </ul>
                             </li>
@@ -106,7 +106,7 @@
 
         <!-- 반응형메뉴 [s] -->
         <div id="topmenuM">
-            <h1 id="m_logo"><a href="index"><img src="./resources/img/common/logo.png" alt="" /></a></h1>
+            <h1 id="m_logo"><a href="<%= base_url %>/index"><img src="<%= base_url %>/resources/img/common/logo.png" alt="" /></a></h1>
             <!-- 메뉴 버튼 -->
             <div id="m_navBtn"><span></span></div>
             <!-- 오픈 메뉴 -->
@@ -116,14 +116,14 @@
                         <li>
                             <button class="m_bmenu" type="button">사업안내</button>
                             <ul class="m_smenu">
-                                <li><a href="portfolio">PORTFOLIO</a></li>
-                                <!-- <li><a href="news">NEWS</a></li> -->
+                                <li><a href="<%= base_url %>/portfolio">PORTFOLIO</a></li>
+                                <!-- <li><a href="<%= base_url %>/news">NEWS</a></li> -->
                             </ul>
                         </li>
                         <li>
                             <button class="m_bmenu" type="button">가격안내</button>
                             <ul class="m_smenu">
-                                <li><a href="pricingInfo">가격안내</a> </li>
+                                <li><a href="<%= base_url %>/pricingInfo">가격안내</a> </li>
                                 <!-- <li><a href="">소분류</a> </li>
                                 <li><a href="">소분류</a> </li> -->
                             </ul>
@@ -131,16 +131,16 @@
                         <li>
                             <button class="m_bmenu" type="button">회사소개</button>
                             <ul class="m_smenu">
-                                <li><a href="aboutCompany">회사소개</a> </li>
-                                <li><a href="companyHistory">연혁</a> </li>
+                                <li><a href="<%= base_url %>/aboutCompany">회사소개</a> </li>
+                                <li><a href="<%= base_url %>/companyHistory">연혁</a> </li>
                             </ul>
                         </li>
                         <li>
                             <button class="m_bmenu" type="button">고객지원</button>
                             <ul class="m_smenu">
-                                <li><a href="notice">공지사항</a></li>
-                                <li><a href="customerCenter">고객센터</a></li>
-                                <li><a href="inquiry">문의하기</a></li>
+                                <li><a href="<%= base_url %>/notice">공지사항</a></li>
+                                <li><a href="<%= base_url %>/customerCenter">고객센터</a></li>
+                                <li><a href="<%= base_url %>/inquiry">문의하기</a></li>
                             </ul>
                         </li>
                     </ul> 

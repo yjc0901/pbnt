@@ -1,6 +1,6 @@
 // === 필요한 패키지 임포트 ===
-var path = require('path');
 const express = require('express');
+var path = require('path');
 const app = express();
 const PORT = 80;
 require('dotenv').config(); // 환경 변수 로드
@@ -30,7 +30,7 @@ app.use(helmet({
 app.use(morgan('dev')); // HTTP 요청 로깅 (개발환경 - dev / 운영(배포)환경 - combined)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use('/resources', express.static(path.join(__dirname, '/resources')));
+app.use('/resources', express.static(path.join(__dirname, 'resources')));
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
@@ -119,6 +119,7 @@ async function asyncQuery(sql, params = []) {
 // 전역 변수로 base_url 설정
 app.use((req, res, next) => {
     res.locals.base_url = `${req.protocol}://${req.get('host')}`;
+    console.log('Base URL:', res.locals.base_url); // 로그 추가
     next();
 });
 

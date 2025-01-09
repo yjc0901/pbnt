@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="ko">
 <%- include('./include/head.ejs') %>
-<script src="/resources/js/jquery-ui.js"></script>
-<script src="/resources/js/jquery-1.8.3.min.js"></script>
-<script src="/resources/js/jquery.easing.min.js"></script>
-<script src="/resources/js/topmenu_script.js"></script>
-<script src="/resources/js/aos.js"></script>
-<script src="/resources/js/feather.min.js"></script>
-<link rel="stylesheet" href="/resources/css/aos.css">
-<link rel="stylesheet" href="/resources/css/sh_common.css"> 
-<link rel="stylesheet" href="/resources/css/sh_sub.css">     
-<link rel="stylesheet" href="/resources/css/style.css">     
+<script src="<%= base_url %>/resources/js/jquery-ui.js"></script>
+<script src="<%= base_url %>/resources/js/jquery-1.8.3.min.js"></script>
+<script src="<%= base_url %>/resources/js/jquery.easing.min.js"></script>
+<script src="<%= base_url %>/resources/js/topmenu_script.js"></script>
+<script src="<%= base_url %>/resources/js/aos.js"></script>
+<script src="<%= base_url %>/resources/js/feather.min.js"></script>
+<link rel="stylesheet" href="<%= base_url %>/resources/css/aos.css">
+<link rel="stylesheet" href="<%= base_url %>/resources/css/sh_common.css"> 
+<link rel="stylesheet" href="<%= base_url %>/resources/css/sh_sub.css">     
+<link rel="stylesheet" href="<%= base_url %>/resources/css/style.css">     
 
 <body>
 
@@ -41,7 +41,7 @@
                 <div id="sh_aside_wrapper">
                     <ul id="sh_snb">
                         <li class="snb_on">
-                            <a href="notice">공지사항</a>
+                            <a href="<%= base_url %>/notice">공지사항</a>
                         </li>
                     </ul>
                 </div>
@@ -70,22 +70,22 @@
                         <% if (prev) { %>
                             <div class="prev-post">
                                 <span>이전글</span>
-                                <a href="/notice/<%= prev.id %>"><%= prev.title %></a>
+                                <a href="<%= base_url %>/notice/<%= prev.id %>"><%= prev.title %></a>
                             </div>
                         <% } %>
                         <% if (next) { %>
                             <div class="next-post">
                                 <span>다음글</span>
-                                <a href="/notice/<%= next.id %>"><%= next.title %></a>
+                                <a href="<%= base_url %>/notice/<%= next.id %>"><%= next.title %></a>
                             </div>
                         <% } %>
                     </div>
 
                     <!-- 버튼 영역 -->
                     <div class="button-area">
-                        <a href="/notice" class="btn-list">목록</a>
+                        <a href="<%= base_url %>/notice" class="btn-list">목록</a>
                         <% if (isLoggedIn) { %>
-                            <a href="/notice/edit/<%= notice.id %>" class="btn-edit">수정</a>
+                            <a href="<%= base_url %>/notice/edit/<%= notice.id %>" class="btn-edit">수정</a>
                             <button onclick="deleteNotice('<%= notice.id %>')" class="btn-delete">삭제</button>
                         <% } %>
                     </div>
