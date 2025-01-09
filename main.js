@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const PORT = 80;
 require('dotenv').config(); // 환경 변수 로드
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 // const saltRounds = 10;
 const helmet = require('helmet'); // 보안 강화
 const morgan = require('morgan'); // 요청 로깅
